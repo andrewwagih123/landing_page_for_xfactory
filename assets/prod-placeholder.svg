@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.5" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="750" fill="url(#bgGrad)"/>
+  <rect width="600" height="750" fill="url(#grid)"/>
+  <circle cx="300" cy="340" r="140" fill="#38bdf8" opacity="0.08"/>
+  <g transform="translate(300, 320) scale(0.65)">
+    <!-- Outer Circle -->
+    <circle cx="0" cy="0" r="160" fill="none" stroke="#94a3b8" stroke-width="10" opacity="0.4"/>
+    <!-- Minimalist X -->
+    <path d="M -70,-80 L 70,80 M 70,-80 L -70,80" stroke="#f8fafc" stroke-width="24" stroke-linecap="round"/>
+  </g>
+  <text x="300" y="520" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="800" letter-spacing="4" fill="#f8fafc">XFACTORY ATELIER</text>
+  <text x="300" y="555" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="600" letter-spacing="3" fill="#94a3b8">HEAVYWEIGHT PIECE</text>
+</svg>

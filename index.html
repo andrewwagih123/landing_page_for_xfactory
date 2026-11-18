@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XFACTORY • Modern Streetwear & Contemporary Atelier | Est. 2023</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+
+  <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       TOP ANNOUNCEMENT BAR
+       ========================================== -->
+  <aside class="announcement-bar" aria-label="Store Announcement">
+    <div class="container announcement-content">
+      <div class="announcement-ticker">
+        <span class="badge-tag">NEW DROP</span>
+        <span>A/W '26 Collection Live • Free Worldwide Shipping on orders over $150</span>
+      </div>
+
+      <div class="announcement-extras">
+        <div class="currency-select-wrap">
+          <i class="fas fa-globe-americas"></i>
+          <label for="currencySelector" class="sr-only">Currency</label>
+          <select id="currencySelector" class="currency-select" aria-label="Select currency">
+            <option value="USD">USD ($)</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="GBP">GBP (£)</option>
+            <option value="EGP">EGP (E£)</option>
+          </select>
+        </div>
+        <div style="font-weight: 600; letter-spacing: 0.05em;">
+          <span>Code: <strong style="color: var(--brand-blue);">XFACTORY20</strong> for 20% OFF</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+       STICKY HEADER & NAVBAR
+       ========================================== -->
+  <header class="site-header" id="mainHeader">
+    <div class="container nav-wrapper">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="XFACTORY Home">
+        <img src="assets/logo.svg" alt="XFACTORY Clothing Store Logo" class="brand-logo-img">
+        <div class="brand-logo-text">
+          <span class="brand-logo-name">XFACTORY</span>
+          <span class="brand-logo-sub">Clothing Store • Est. 2023</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#shop" class="nav-link">New Drops</a>
+        <a href="#categories" class="nav-link">Categories</a>
+        <a href="#atelier" class="nav-link">The Atelier</a>
+        <a href="#lookbook" class="nav-link">Lookbook</a>
+        <a href="#size-guide" class="nav-link">Size Guide</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+      </nav>
+
+      <!-- Nav Action Icons -->
+      <div class="nav-actions">
+        <button class="btn-icon" onclick="openSearch()" aria-label="Search products" title="Quick Search">
+          <i class="fas fa-search"></i>
+        </button>
+
+        <button class="btn-icon" onclick="showToast('Your saved wishlist contains ' + wishlist.size + ' items!')" aria-label="Wishlist" title="Wishlist">
+          <i class="far fa-heart"></i>
+          <span class="badge-count wishlist-count-badge">2</span>
+        </button>
+
+        <div class="cart-btn-wrap">
+          <button class="btn btn-primary" onclick="openCart()" style="padding: 10px 20px; font-size: 0.88rem;" aria-label="Shopping Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-subtotal-nav cart-subtotal-val">$110</span>
+            <span class="badge-count cart-count-badge" style="position: static; margin-left: 6px;">1</span>
+          </button>
+        </div>
+
+        <button class="btn-icon mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <section class="hero-section" id="home">
+    <div class="hero-bg-glow"></div>
+    <div class="container hero-grid">
+      <!-- Left Content -->
+      <div class="hero-content">
+        <span class="section-tag">
+          <i class="fas fa-layer-group"></i> AUTUMN / WINTER 2026 DROP
+        </span>
+
+        <h1 class="hero-title font-display">
+          PRECISION CUTS.<br>
+          <span class="text-gradient">TIMELESS</span> URBAN CULTURE.
+        </h1>
+
+        <p class="hero-desc">
+          Crafted from 460 GSM combed French Terry and structured Japanese cotton. Built for those who move between contemporary minimalism and architectural streetwear.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#shop" class="btn btn-primary">
+            <span>Explore The Collection</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#atelier" class="btn btn-secondary">
+            <i class="fas fa-compass"></i>
+            <span>Our Atelier Story</span>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h4>460<small style="font-size:0.9rem; font-weight:700;">GSM</small></h4>
+            <p>Heavyweight French Terry</p>
+          </div>
+          <div class="stat-item">
+            <h4>4.92<small style="font-size:0.9rem; font-weight:700;">★</small></h4>
+            <p>Customer Satisfaction</p>
+          </div>
+          <div class="stat-item">
+            <h4>100%</h4>
+            <p>Ethical Sustainable Mills</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual Hero Card -->
+      <div class="hero-visual">
+        <div class="hero-image-card">
+          <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1200&auto=format&fit=crop" 
+               alt="XFACTORY Model Streetwear Collection" 
+               class="hero-main-img" 
+               onerror="this.src='assets/brand-store.jpg'">
+          
+          <div class="hero-overlay"></div>
+
+          <!-- Interactive Hotspot Tag -->
+          <div class="hero-tag-hotspot">
+            <div class="hotspot-info">
+              <h5>X-01 Heavyweight Boxy Hoodie</h5>
+              <span>Washed Slate • 460 GSM Cotton</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="hotspot-price">$110</span>
+              <button class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;" onclick="openQuickView('xf-01')">
+                View
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Authenticity Card featuring user's store card -->
+        <div class="floating-badge floating-badge-top">
+          <img src="assets/brand-store.jpg" alt="XFACTORY Store Preview" class="badge-avatar">
+          <div>
+            <div class="badge-text-title">XFACTORY ATELIER</div>
+            <div class="badge-text-sub">Flagship Store • Est. 2023</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       INFINITE MARQUEE TICKER
+       ========================================== -->
+  <section class="marquee-section" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">XFACTORY <span class="sparkle">✦</span></span>
+      <span class="marquee-item">HEAVYWEIGHT 460 GSM <span class="sparkle">✦</span></span>
+      <span class="marquee-item">STREETWEAR ARCHITECTURE <span class="sparkle">✦</span></span>
+      <span class="marquee-item">LIMITED SMALL BATCHES <span class="sparkle">✦</span></span>
+      <span class="marquee-item">ESTABLISHED 2023 <span class="sparkle">✦</span></span>
+      <span class="marquee-item">WORLDWIDE EXPRESS SHIPPING <span class="sparkle">✦</span></span>
+      <span class="marquee-item">ZERO OVERPRODUCTION <span class="sparkle">✦</span></span>
+      <span class="marquee-item">XFACTORY <span class="sparkle">✦</span></span>
+      <span class="marquee-item">HEAVYWEIGHT 460 GSM <span class="sparkle">✦</span></span>
+      <span class="marquee-item">STREETWEAR ARCHITECTURE <span class="sparkle">✦</span></span>
+      <span class="marquee-item">LIMITED SMALL BATCHES <span class="sparkle">✦</span></span>
+      <span class="marquee-item">ESTABLISHED 2023 <span class="sparkle">✦</span></span>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CURATED CATEGORIES
+       ========================================== -->
+  <section class="categories-section" id="categories">
+    <div class="container">
+      <div class="section-header-flex">
+        <div>
+          <span class="section-tag">CURATED WARDROBE</span>
+          <h2 class="section-title font-display">ARCHITECTURAL SILHOUETTES</h2>
+        </div>
+        <p class="section-desc">
+          Engineered for layering and standalone power. Every category is milled with custom weights, textured dyes, and structural seams.
+        </p>
+      </div>
+
+      <div class="categories-grid">
+        <!-- Cat 1: Hoodies -->
+        <div class="category-card" onclick="setCategoryFilter('hoodies', document.querySelector('[data-filter=hoodies]')); location.href='#shop';">
+          <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=800&auto=format&fit=crop" 
+               alt="Heavyweight Hoodies" class="category-img" onerror="this.src='assets/prod-placeholder.svg'">
+          <div class="category-overlay">
+            <span class="category-tag">460 GSM Fleece</span>
+            <h3 class="category-title">Heavyweight Hoodies</h3>
+            <span class="category-explore">Explore Collection <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+
+        <!-- Cat 2: Outerwear -->
+        <div class="category-card" onclick="setCategoryFilter('outerwear', document.querySelector('[data-filter=outerwear]')); location.href='#shop';">
+          <img src="https://images.unsplash.com/photo-1548883354-7622d03aca27?q=80&w=800&auto=format&fit=crop" 
+               alt="Tailored Outerwear" class="category-img" onerror="this.src='assets/prod-placeholder.svg'">
+          <div class="category-overlay">
+            <span class="category-tag">Stormproof & Wool</span>
+            <h3 class="category-title">Technical Outerwear</h3>
+            <span class="category-explore">Explore Collection <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+
+        <!-- Cat 3: Trousers -->
+        <div class="category-card" onclick="setCategoryFilter('trousers', document.querySelector('[data-filter=trousers]')); location.href='#shop';">
+          <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=800&auto=format&fit=crop" 
+               alt="Trousers and Cargos" class="category-img" onerror="this.src='assets/prod-placeholder.svg'">
+          <div class="category-overlay">
+            <span class="category-tag">Modular Detailing</span>
+            <h3 class="category-title">Cargos & Trousers</h3>
+            <span class="category-explore">Explore Collection <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+
+        <!-- Cat 4: Heavy Tees -->
+        <div class="category-card" onclick="setCategoryFilter('tees', document.querySelector('[data-filter=tees]')); location.href='#shop';">
+          <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800&auto=format&fit=crop" 
+               alt="Heavyweight Tees" class="category-img" onerror="this.src='assets/prod-placeholder.svg'">
+          <div class="category-overlay">
+            <span class="category-tag">320 GSM Ringspun</span>
+            <h3 class="category-title">Signature Heavy Tees</h3>
+            <span class="category-explore">Explore Collection <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FEATURED PRODUCTS (INTERACTIVE SHOPPING)
+       ========================================== -->
+  <section class="products-section" id="shop">
+    <div class="container">
+      <div class="section-header-flex">
+        <div>
+          <span class="section-tag">THE CURRENT DROP</span>
+          <h2 class="section-title font-display">ESSENTIAL STREETWEAR</h2>
+        </div>
+        <p class="section-desc">
+          Click any product to inspect detailed technical specifications, size fit notes, or add immediately to your bag.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs" role="tablist">
+        <button class="filter-tab active" onclick="setCategoryFilter('all', this)" role="tab">All Drops</button>
+        <button class="filter-tab" data-filter="hoodies" onclick="setCategoryFilter('hoodies', this)" role="tab">Hoodies & Sweats</button>
+        <button class="filter-tab" data-filter="outerwear" onclick="setCategoryFilter('outerwear', this)" role="tab">Outerwear</button>
+        <button class="filter-tab" data-filter="trousers" onclick="setCategoryFilter('trousers', this)" role="tab">Pants & Cargos</button>
+        <button class="filter-tab" data-filter="tees" onclick="setCategoryFilter('tees', this)" role="tab">Boxy Tees</button>
+        <button class="filter-tab" data-filter="accessories" onclick="setCategoryFilter('accessories', this)" role="tab">Accessories</button>
+      </div>
+
+      <!-- Dynamic Product Cards Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Rendered by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       THE ATELIER & STORE SPOTLIGHT (User Image)
+       ========================================== -->
+  <section class="atelier-section" id="atelier">
+    <div class="container atelier-grid">
+      <!-- Atelier Gallery / User Store Image -->
+      <div class="atelier-gallery">
+        <div class="atelier-main-card">
+          <img src="assets/brand-store.jpg" alt="XFACTORY Flagship Concept Store" class="atelier-img">
+        </div>
+        <!-- Circular Brand Stamp Badge -->
+        <div class="atelier-badge-stamp">
+          <img src="assets/logo.svg" alt="XFACTORY Official Badge">
+        </div>
+      </div>
+
+      <!-- Atelier Content -->
+      <div class="atelier-content">
+        <span class="section-tag">
+          <i class="fas fa-feather-alt"></i> THE CRAFTSMANSHIP
+        </span>
+
+        <h2 class="section-title font-display">
+          FROM OUR BOUTIQUE<br>
+          <span class="text-gradient">TO YOUR WARDROBE.</span>
+        </h2>
+
+        <p class="section-desc">
+          Founded in 2023, <strong>XFACTORY</strong> operates on an unyielding principle: fashion must possess tangible substance. We avoid disposable trends in favor of heavy tactile fabrics, precision patterns, and structural integrity that improves with every wash.
+        </p>
+
+        <!-- 4 Pillars Grid -->
+        <div class="atelier-pillars">
+          <div class="pillar-item">
+            <span class="pillar-num">01.</span>
+            <h5>Custom Milled GSM</h5>
+            <p>Fabrics weighed strictly between 320 to 520 GSM for dramatic drape and cold-weather endurance.</p>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-num">02.</span>
+            <h5>Double-Lock Stitching</h5>
+            <p>Reinforced bar-tacks and French seams across all stress points for lifetime structural resilience.</p>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-num">03.</span>
+            <h5>Mineral & Acid Washes</h5>
+            <p>Artisanal garment-dye processes that produce rich, soft-touch patinas with no two garments identical.</p>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-num">04.</span>
+            <h5>Zero Deadstock Policy</h5>
+            <p>Engineered limited production runs to completely eliminate environmental waste and overproduction.</p>
+          </div>
+        </div>
+
+        <!-- Store Flagship Info Card -->
+        <div class="store-details-card">
+          <div class="store-info">
+            <h6><i class="fas fa-map-marker-alt" style="color:var(--brand-blue); margin-right:8px;"></i> Flagship Boutique & Studio</h6>
+            <p>Open Monday – Saturday • 11:00 AM – 9:00 PM</p>
+          </div>
+          <button class="btn btn-secondary" onclick="showToast('Private Styling Sessions: Please email atelier@xfactory.com')" style="padding: 10px 18px; font-size: 0.82rem;">
+            Book Styling
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       EDITORIAL LOOKBOOK SECTION
+       ========================================== -->
+  <section class="lookbook-section" id="lookbook">
+    <div class="container">
+      <div class="section-header-flex">
+        <div>
+          <span class="section-tag">EDITORIAL LOOKBOOK</span>
+          <h2 class="section-title font-display">THE URBAN NOMAD VOL. III</h2>
+        </div>
+        <p class="section-desc">
+          An exploration of tonal layering, modular weather barriers, and relaxed volume in modern metropolitan landscapes.
+        </p>
+      </div>
+
+      <div class="lookbook-grid">
+        <!-- Main Lookbook Feature -->
+        <div class="lookbook-featured">
+          <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1200&auto=format&fit=crop" 
+               alt="Lookbook Editorial Vol 3" onerror="this.src='assets/brand-store.jpg'">
+          <div class="lookbook-content-overlay">
+            <span class="section-tag" style="background: rgba(0,0,0,0.6);">LOOK 01 • MONOCHROME MONOLITH</span>
+            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 12px;">The Oversized Trench & Double-Pleat Silhouette</h3>
+            <p style="color: var(--text-secondary); max-width: 520px; margin-bottom: 20px;">
+              Pairing technical water-repellent shell with fluid wool trousers for high-contrast tension between utility and tailoring.
+            </p>
+            <button class="btn btn-primary" onclick="openQuickView('xf-02')">
+              <span>Shop This Full Look</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Side Lookbook Cards -->
+        <div class="lookbook-aside">
+          <div class="lookbook-mini-card">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=800&auto=format&fit=crop" 
+                 alt="Lookbook 02" onerror="this.src='assets/brand-store.jpg'">
+            <div class="lookbook-mini-overlay">
+              <h4 style="font-size: 1.1rem; font-weight: 800;">Look 02: Tonal Earth & Washed Minerals</h4>
+              <p style="font-size: 0.85rem; color: var(--brand-blue); margin-top: 4px;">Featuring 460 GSM Vintage Zip & Relaxed Cargo</p>
+            </div>
+          </div>
+
+          <div class="lookbook-mini-card">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop" 
+                 alt="Lookbook 03" onerror="this.src='assets/brand-store.jpg'">
+            <div class="lookbook-mini-overlay">
+              <h4 style="font-size: 1.1rem; font-weight: 800;">Look 03: Architectural Proportions</h4>
+              <p style="font-size: 0.85rem; color: var(--brand-blue); margin-top: 4px;">Minimalist Boxy Cut with Leather Accents</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SIZE & FIT GUIDE INTERACTIVE TOOL
+       ========================================== -->
+  <section class="size-guide-section" id="size-guide">
+    <div class="container">
+      <div class="size-guide-box">
+        <div class="size-guide-header">
+          <div>
+            <span class="section-tag"><i class="fas fa-ruler-combined"></i> ACCURATE TAILORING</span>
+            <h2 class="section-title font-display" style="font-size: 2.2rem; margin-bottom: 6px;">SIZE & FIT ARCHITECTURE</h2>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Our garments feature a relaxed contemporary streetwear drape. If you prefer a closer standard fit, size down one size.
+            </p>
+          </div>
+
+          <div class="unit-toggle" aria-label="Measurement Units">
+            <button class="unit-btn active" id="btnUnitCm" onclick="setSizeUnit('cm')">Metric (CM)</button>
+            <button class="unit-btn" id="btnUnitIn" onclick="setSizeUnit('in')">Imperial (IN)</button>
+          </div>
+        </div>
+
+        <div class="size-table-wrap">
+          <table class="size-table">
+            <thead>
+              <tr>
+                <th>Size</th>
+                <th>Chest Width</th>
+                <th>Shoulder Width</th>
+                <th>Body Length</th>
+                <th>Sleeve Length</th>
+                <th>Recommended Build</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>S (Small)</strong></td>
+                <td><span class="size-val" data-cm="116">116 cm</span></td>
+                <td><span class="size-val" data-cm="56">56 cm</span></td>
+                <td><span class="size-val" data-cm="70">70 cm</span></td>
+                <td><span class="size-val" data-cm="61">61 cm</span></td>
+                <td>5'5" – 5'9" (165 – 175 cm) / 60-70 kg</td>
+              </tr>
+              <tr>
+                <td><strong>M (Medium)</strong></td>
+                <td><span class="size-val" data-cm="122">122 cm</span></td>
+                <td><span class="size-val" data-cm="58">58 cm</span></td>
+                <td><span class="size-val" data-cm="72">72 cm</span></td>
+                <td><span class="size-val" data-cm="63">63 cm</span></td>
+                <td>5'9" – 6'0" (175 – 183 cm) / 70-82 kg</td>
+              </tr>
+              <tr>
+                <td><strong>L (Large)</strong></td>
+                <td><span class="size-val" data-cm="128">128 cm</span></td>
+                <td><span class="size-val" data-cm="60">60 cm</span></td>
+                <td><span class="size-val" data-cm="74">74 cm</span></td>
+                <td><span class="size-val" data-cm="65">65 cm</span></td>
+                <td>6'0" – 6'3" (183 – 190 cm) / 82-95 kg</td>
+              </tr>
+              <tr>
+                <td><strong>XL (X-Large)</strong></td>
+                <td><span class="size-val" data-cm="134">134 cm</span></td>
+                <td><span class="size-val" data-cm="62">62 cm</span></td>
+                <td><span class="size-val" data-cm="76">76 cm</span></td>
+                <td><span class="size-val" data-cm="66">66 cm</span></td>
+                <td>6'2"+ (188+ cm) / 95-110 kg</td>
+              </tr>
+              <tr>
+                <td><strong>XXL (Double XL)</strong></td>
+                <td><span class="size-val" data-cm="140">140 cm</span></td>
+                <td><span class="size-val" data-cm="64">64 cm</span></td>
+                <td><span class="size-val" data-cm="78">78 cm</span></td>
+                <td><span class="size-val" data-cm="67">67 cm</span></td>
+                <td>Heavy athletic builds & max oversized draping</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CUSTOMER REVIEWS & SOCIAL PROOF
+       ========================================== -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header-flex">
+        <div>
+          <span class="section-tag">VERIFIED TESTIMONIALS</span>
+          <h2 class="section-title font-display">COMMUNITY VOICES</h2>
+        </div>
+        <div style="text-align: right;">
+          <div style="font-size: 1.8rem; font-weight: 800; color: #ffffff;">4.92 / 5.0</div>
+          <div style="color: #f59e0b; font-size: 0.95rem;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Based on 3,420+ verified deliveries</span>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-quote">
+            "The weight on the X-01 Hoodie is unreal. I own hoodies from high-end Japanese labels and XFACTORY stands toe-to-toe in cotton density and seam finish. Holds its shape completely."
+          </p>
+          <div class="reviewer-meta">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" alt="Marcus K." class="reviewer-avatar">
+            <div>
+              <div class="reviewer-name">Marcus K. <i class="fas fa-check-circle" style="color:var(--brand-blue); font-size:0.8rem;"></i></div>
+              <div class="reviewer-title">London, UK • Verified Buyer</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-quote">
+            "The modular trench coat is pure functional luxury. The magnetic closures and interior carry harness are details you only see on four-figure runway garments. Absolutely worth it."
+          </p>
+          <div class="reviewer-meta">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=200&auto=format&fit=crop" alt="Julian T." class="reviewer-avatar">
+            <div>
+              <div class="reviewer-name">Julian T. <i class="fas fa-check-circle" style="color:var(--brand-blue); font-size:0.8rem;"></i></div>
+              <div class="reviewer-title">New York, USA • Creative Director</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-quote">
+            "Fastest delivery ever and the box packaging feels like opening an architectural piece. The 320 GSM heavy tee collar does not fold or wrinkle even after 10 gentle washes."
+          </p>
+          <div class="reviewer-meta">
+            <img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=200&auto=format&fit=crop" alt="Sarah D." class="reviewer-avatar">
+            <div>
+              <div class="reviewer-name">Sarah D. <i class="fas fa-check-circle" style="color:var(--brand-blue); font-size:0.8rem;"></i></div>
+              <div class="reviewer-title">Berlin, Germany • Fashion Stylist</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       COMMUNITY & INSTAGRAM GALLERY
+       ========================================== -->
+  <section class="community-section">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 30px;">
+        <span class="section-tag">COMMUNITY CURATION</span>
+        <h2 class="section-title font-display" style="font-size: 2.2rem;">TAGGED BY THE SYNDICATE</h2>
+        <p style="color: var(--text-secondary);">Tag <strong>@XFACTORY.STORE</strong> and use <strong>#XFACTORY</strong> to be featured on our official look gallery.</p>
+      </div>
+
+      <div class="community-grid">
+        <div class="community-card">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=600&auto=format&fit=crop" alt="Community Post 1" onerror="this.src='assets/brand-store.jpg'">
+          <div class="community-hover"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="community-card">
+          <img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=600&auto=format&fit=crop" alt="Community Post 2" onerror="this.src='assets/brand-store.jpg'">
+          <div class="community-hover"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="community-card">
+          <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=600&auto=format&fit=crop" alt="Community Post 3" onerror="this.src='assets/brand-store.jpg'">
+          <div class="community-hover"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="community-card">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" alt="Community Post 4" onerror="this.src='assets/brand-store.jpg'">
+          <div class="community-hover"><i class="fab fa-instagram"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       VIP SYNDICATE NEWSLETTER
+       ========================================== -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-box">
+        <span class="section-tag" style="background: rgba(56, 189, 248, 0.1);">INSIDER ACCESS</span>
+        <h2 class="section-title font-display" style="font-size: 2.4rem;">JOIN THE XFACTORY SYNDICATE</h2>
+        <p style="color: var(--text-secondary); font-size: 1.05rem;">
+          Gain 48-hour early access to small-batch drops, private atelier invitations, and receive an instant <strong>15% OFF</strong> promo code for your first acquisition.
+        </p>
+
+        <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+          <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Enter your email address..." required>
+          <button type="submit" class="btn btn-primary" style="padding: 12px 28px;">
+            <span>Unlock 15% Off</span>
+            <i class="fas fa-key"></i>
+          </button>
+        </form>
+
+        <div id="newsletterFeedback" class="newsletter-feedback"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="#home" class="brand-logo">
+            <img src="assets/logo-white.svg" alt="XFACTORY" class="brand-logo-img">
+            <div class="brand-logo-text">
+              <span class="brand-logo-name">XFACTORY</span>
+              <span class="brand-logo-sub">Clothing Store • Est. 2023</span>
+            </div>
+          </a>
+          <p>
+            Architectural streetwear crafted with uncompromising substance, custom heavy fabrications, and timeless urban longevity.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="btn-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="btn-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener" class="btn-icon" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="btn-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 1 -->
+        <div class="footer-col">
+          <h5>Collections</h5>
+          <ul class="footer-links">
+            <li><a href="#shop" onclick="setCategoryFilter('hoodies', null)">Heavy Hoodies & Sweats</a></li>
+            <li><a href="#shop" onclick="setCategoryFilter('outerwear', null)">Technical Outerwear</a></li>
+            <li><a href="#shop" onclick="setCategoryFilter('trousers', null)">Modular Cargos</a></li>
+            <li><a href="#shop" onclick="setCategoryFilter('tees', null)">Boxy Heavy Tees</a></li>
+            <li><a href="#shop" onclick="setCategoryFilter('accessories', null)">Atelier Leather Goods</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="footer-col">
+          <h5>Client Concierge</h5>
+          <ul class="footer-links">
+            <li><a href="#size-guide">Size & Fit Guide</a></li>
+            <li><a href="#atelier">Store Locations & Hours</a></li>
+            <li><a href="#shop" onclick="showToast('Global Express Delivery: 3-5 business days')">Shipping & Customs</a></li>
+            <li><a href="#shop" onclick="showToast('30-Day Hassle-free Returns & Exchanges')">Returns & Exchanges</a></li>
+            <li><a href="#shop" onclick="showToast('Lifetime Guarantee on all seams and zippers')">Seam Guarantee</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="footer-col">
+          <h5>Legal & Security</h5>
+          <ul class="footer-links">
+            <li><a href="#shop" onclick="showToast('Privacy Policy: All customer data encrypted')">Privacy Policy</a></li>
+            <li><a href="#shop" onclick="showToast('Terms of Service: Standard international e-commerce protections')">Terms of Service</a></li>
+            <li><a href="#shop" onclick="showToast('Ethical Manufacturing Certificate 2026')">Ethical Production</a></li>
+            <li><a href="#shop" onclick="showToast('Sustainability Charter: 100% Recycled Poly Bags')">Eco Packaging</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 <strong>XFACTORY CLOTHING STORE</strong>. All Rights Reserved. Established 2023.
+        </div>
+
+        <div class="payment-badges">
+          <span class="payment-tag"><i class="fab fa-cc-visa"></i> Visa</span>
+          <span class="payment-tag"><i class="fab fa-cc-mastercard"></i> Mastercard</span>
+          <span class="payment-tag"><i class="fab fa-apple-pay"></i> Apple Pay</span>
+          <span class="payment-tag"><i class="fab fa-google-pay"></i> Google Pay</span>
+          <span class="payment-tag"><i class="fab fa-cc-paypal"></i> PayPal</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       MODAL OVERLAY (SHARED)
+       ========================================== -->
+  <div class="modal-overlay" id="modalOverlay"></div>
+
+  <!-- ==========================================
+       SLIDE-OUT SHOPPING CART DRAWER
+       ========================================== -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Bag">
+    <div class="cart-header">
+      <h3>Shopping Bag (<span class="cart-count-badge">1</span>)</h3>
+      <button class="btn-icon" onclick="closeCart()" aria-label="Close cart">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress -->
+    <div class="cart-progress-box">
+      <div class="progress-text" id="freeShippingMsg">
+        Add <strong>$40</strong> more for <strong>Free Worldwide Shipping</strong>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="freeShippingBar"></div>
+      </div>
+    </div>
+
+    <!-- Items List -->
+    <div class="cart-body" id="cartItemsContainer">
+      <!-- Injected by script.js -->
+    </div>
+
+    <!-- Cart Footer & Totals -->
+    <div class="cart-footer">
+      <!-- Promo code input -->
+      <div class="promo-wrap">
+        <input type="text" id="promoCodeInput" class="promo-input" placeholder="Promo code (e.g. XFACTORY20)">
+        <button class="promo-btn btn" onclick="applyCoupon()">Apply</button>
+      </div>
+
+      <div class="cart-totals">
+        <div class="total-row">
+          <span>Subtotal</span>
+          <span class="cart-subtotal-val">$110</span>
+        </div>
+        <div class="total-row" id="cartDiscountRow" style="display:none; color: var(--accent-green);">
+          <span>Promo Discount</span>
+          <span id="cartDiscountVal">-$22</span>
+        </div>
+        <div class="total-row">
+          <span>Estimated Shipping</span>
+          <span id="shippingCostVal">$15</span>
+        </div>
+        <div class="total-row grand-total">
+          <span>Total</span>
+          <span id="cartGrandTotal">$125</span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" style="width: 100%; border-radius: var(--radius-sm); padding: 16px;" onclick="triggerCheckout()">
+        <span>Proceed to Secure Checkout</span>
+        <i class="fas fa-lock" style="font-size: 0.85rem;"></i>
+      </button>
+
+      <p style="text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 10px;">
+        🔒 Encrypted 256-Bit SSL Checkout • Free 30-Day Returns
+      </p>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+       QUICK VIEW PRODUCT MODAL
+       ========================================== -->
+  <div class="quick-view-modal" id="quickViewModal" role="dialog" aria-modal="true">
+    <button class="modal-close-btn" onclick="closeQuickView()" aria-label="Close modal">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <div class="modal-inner-grid">
+      <div class="modal-image-showcase">
+        <img id="modalImage" src="" alt="Product view" onerror="this.src='assets/prod-placeholder.svg'">
+      </div>
+
+      <div class="modal-details">
+        <div id="modalRating" style="font-size: 0.85rem; font-weight: 700; color: var(--brand-gold-light); margin-bottom: 8px;"></div>
+        <h3 id="modalTitle" style="font-size: 1.5rem; font-weight: 800; color: #ffffff; margin-bottom: 8px;"></h3>
+
+        <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px;">
+          <span id="modalPrice" style="font-size: 1.4rem; font-weight: 800; color: #ffffff;"></span>
+          <span id="modalOrigPrice" style="font-size: 1rem; color: var(--text-muted); text-decoration: line-through;"></span>
+        </div>
+
+        <p id="modalDesc" style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 20px;"></p>
+
+        <!-- Color Selection -->
+        <div style="margin-bottom: 16px;">
+          <div style="font-size: 0.85rem; font-weight: 700; margin-bottom: 8px; color: var(--text-primary);">Select Colorway</div>
+          <div id="modalColorPills" class="size-pills"></div>
+        </div>
+
+        <!-- Size Selection -->
+        <div class="size-selector-wrap">
+          <div class="size-label-row">
+            <span style="font-weight: 700;">Select Size</span>
+            <a href="#size-guide" onclick="closeQuickView();" style="color: var(--brand-blue); font-size: 0.82rem; text-decoration: underline;">
+              View Size Guide
+            </a>
+          </div>
+          <div id="modalSizePills" class="size-pills"></div>
+        </div>
+
+        <!-- Quantity & Add to Cart -->
+        <div style="display: flex; gap: 14px; margin-top: 10px; margin-bottom: 24px;">
+          <div class="qty-stepper" style="padding: 4px;">
+            <button class="qty-btn" onclick="const q=document.getElementById('modalQtyInput'); if(q.value>1) q.value--;">−</button>
+            <input type="number" id="modalQtyInput" value="1" min="1" max="10" style="width: 36px; text-align: center; color:#ffffff; font-weight:700;">
+            <button class="qty-btn" onclick="const q=document.getElementById('modalQtyInput'); q.value++;">+</button>
+          </div>
+          <button class="btn btn-primary" style="flex: 1; border-radius: var(--radius-sm);" onclick="addModalItemToCart()">
+            <i class="fas fa-shopping-bag"></i>
+            <span>Add to Shopping Bag</span>
+          </button>
+        </div>
+
+        <!-- Technical Attributes -->
+        <div style="border-top: 1px solid var(--border-subtle); padding-top: 16px; font-size: 0.85rem; color: var(--text-secondary);">
+          <div style="margin-bottom: 6px;"><strong style="color:#ffffff;">Fabric:</strong> <span id="modalFabric"></span></div>
+          <div><strong style="color:#ffffff;">Fit:</strong> <span id="modalFit"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       QUICK SEARCH OVERLAY
+       ========================================== -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-box-wrap">
+      <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
+        <button class="btn-icon" onclick="closeSearch()" aria-label="Close search">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="search-input-inner">
+        <i class="fas fa-search" style="color: var(--brand-blue);"></i>
+        <input type="text" id="searchInput" placeholder="Search hoodies, jackets, cargos..." oninput="handleSearchInput(event)">
+      </div>
+
+      <div class="search-results-grid" id="searchResultsContainer"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       TOAST CONTAINER
+       ========================================== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
